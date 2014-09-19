@@ -8,6 +8,7 @@ public class PlayerCtrl : MonoBehaviour {
 
 	private Transform tr;
 	public float moveSpeed = 10.0f;
+	public float rotSpeed = 100.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -23,5 +24,6 @@ public class PlayerCtrl : MonoBehaviour {
 		Debug.Log("V = " + v.ToString());
 
 		tr.Translate(Vector3.forward * moveSpeed * v * Time.deltaTime, Space.Self);
+		tr.Rotate (Vector3.up * Time.deltaTime * rotSpeed * Input.GetAxis("Mouse X"));
 	}
 }
