@@ -23,7 +23,9 @@ public class PlayerCtrl : MonoBehaviour {
 		Debug.Log("H = " + h.ToString());
 		Debug.Log("V = " + v.ToString());
 
-		tr.Translate(Vector3.forward * moveSpeed * v * Time.deltaTime, Space.Self);
+		Vector3 moveDir = (Vector3.forward * v) + (Vector3.right * h);
+
+		tr.Translate(moveDir * moveSpeed * Time.deltaTime, Space.Self);
 		tr.Rotate (Vector3.up * Time.deltaTime * rotSpeed * Input.GetAxis("Mouse X"));
 	}
 }
