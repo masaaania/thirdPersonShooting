@@ -713,6 +713,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   rotSpeed: 100
+  anim:
+    idle: {fileID: 7400030, guid: 278cd0f48ed93439f99715f19108907e, type: 3}
+    runForward: {fileID: 7400002, guid: 278cd0f48ed93439f99715f19108907e, type: 3}
+    runBackward: {fileID: 7400004, guid: 278cd0f48ed93439f99715f19108907e, type: 3}
+    runRight: {fileID: 7400006, guid: 278cd0f48ed93439f99715f19108907e, type: 3}
+    runLeft: {fileID: 7400010, guid: 278cd0f48ed93439f99715f19108907e, type: 3}
+  _animation: {fileID: 0}
 --- !u!1 &704352873
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,8 +810,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 343179328}
   m_AABB:
-    m_Center: {x: .00631773472, y: .203126013, z: .0972992182}
-    m_Extent: {x: 1.17617643, y: .948697388, z: .958188176}
+    m_Center: {x: .00631773472, y: .203126431, z: .0973002911}
+    m_Extent: {x: 1.17617643, y: .948697805, z: .958189249}
   m_DirtyAABB: 0
 --- !u!1001 &739746918
 Prefab:
@@ -1422,6 +1429,11 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 278cd0f48ed93439f99715f19108907e, type: 3}
   m_Animations:
   - {fileID: 7400000, guid: 278cd0f48ed93439f99715f19108907e, type: 3}
+  - {fileID: 7400030, guid: 278cd0f48ed93439f99715f19108907e, type: 3}
+  - {fileID: 7400002, guid: 278cd0f48ed93439f99715f19108907e, type: 3}
+  - {fileID: 7400004, guid: 278cd0f48ed93439f99715f19108907e, type: 3}
+  - {fileID: 7400006, guid: 278cd0f48ed93439f99715f19108907e, type: 3}
+  - {fileID: 7400010, guid: 278cd0f48ed93439f99715f19108907e, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -1843,6 +1855,7 @@ GameObject:
   - 92: {fileID: 1648718750}
   - 124: {fileID: 1648718749}
   - 81: {fileID: 1648718748}
+  - 114: {fileID: 1648718753}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1915,6 +1928,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1648718753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1648718747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ea189a0823242cdac9fd0a8b1083c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 680610750}
+  dist: 10
+  height: 5
+  dampRotate: 5
 --- !u!1 &1667392060
 GameObject:
   m_ObjectHideFlags: 0

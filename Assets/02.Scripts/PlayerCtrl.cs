@@ -38,9 +38,6 @@ public class PlayerCtrl : MonoBehaviour {
 		h = Input.GetAxis ("Horizontal");
 		v = Input.GetAxis ("Vertical");
 
-		Debug.Log("H = " + h.ToString());
-		Debug.Log("V = " + v.ToString());
-
 		Vector3 moveDir = (Vector3.forward * v) + (Vector3.right * h);
 
 		tr.Translate(moveDir * moveSpeed * Time.deltaTime, Space.Self);
