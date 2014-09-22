@@ -2463,6 +2463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 20
   speed: 1000
+  firePos: {x: 0, y: 0, z: 0}
 --- !u!135 &1944076541
 SphereCollider:
   m_ObjectHideFlags: 0
