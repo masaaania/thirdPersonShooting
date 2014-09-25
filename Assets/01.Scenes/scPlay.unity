@@ -767,7 +767,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .231900007, y: 1.09710002, z: .910369992}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1878120074}
   m_Father: {fileID: 680610750}
   m_RootOrder: 2
 --- !u!1 &495509109
@@ -1046,6 +1047,7 @@ MonoBehaviour:
   bullet: {fileID: 100002, guid: 0cfff9f299afd44fd94f30200f60441e, type: 2}
   firePos: {fileID: 459325709}
   fireSfx: {fileID: 8300000, guid: 3c5b036434efd4579908d337e398593c, type: 3}
+  _renderer: {fileID: 1878120075}
 --- !u!81 &680610753
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3129,6 +3131,62 @@ Prefab:
   m_RootGameObject: {fileID: 2030174661}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1878120073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1878120074}
+  - 33: {fileID: 1878120076}
+  - 23: {fileID: 1878120075}
+  m_Layer: 0
+  m_Name: MuzzleFlash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1878120074
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1878120073}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 459325709}
+  m_RootOrder: 0
+--- !u!23 &1878120075
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1878120073}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: ad44f9e391dd44d13ad6d93591c0e12e, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1878120076
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1878120073}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1940888626
 GameObject:
   m_ObjectHideFlags: 0
