@@ -10,7 +10,7 @@ public class WallCtrl : MonoBehaviour {
 			Vector3 firePos = collision.gameObject.GetComponent<BulletCtrl>().firePos;
 			Vector3 relativePos = firePos - collision.transform.position;
 
-			Object obj = Instantiate(sparkEffect, collision.transform.position, Quaternion.identity);
+			Object obj = Instantiate(sparkEffect, collision.transform.position, Quaternion.LookRotation(relativePos));
 			Destroy(obj, 1.0f);
 //			Instantiate(sparkEffect, collision.transform.position, Quaternion.identity);
 			Destroy(collision.gameObject);
